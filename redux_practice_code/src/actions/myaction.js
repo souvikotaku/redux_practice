@@ -55,3 +55,13 @@ export const action2=(wish)=>{
         
     }
 }
+
+export const action3=(name2)=>{
+    return{
+       
+            type: 'ADD_NAME',
+            payload: name2
+        
+    }
+}
+

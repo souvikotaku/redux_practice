@@ -9,14 +9,16 @@ import {Provider} from 'react-redux';
 import reducer from './reducers/reducer';
 import nameReducer from './reducers/nameReducer';
 import wishReducer from './reducers/wishReducer';
+import newReducer from './reducers/newReducer';
 
 const masterReducer = combineReducers({
   name: nameReducer,
-  wish: wishReducer
+  wish: wishReducer,
+  name2: newReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(masterReducer,{name:'ramesh',wish:['eat','code']},composeEnhancers(applyMiddleware(thunk)));
+const store = createStore(masterReducer,{name:'ramesh',name2:'azriel'},composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>
